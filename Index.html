@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vacaciones</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🧳 Mis Vacaciones</h1>
+
+<p>Todos los lugares que quiero visitar.</p>
+
+</header>
+
+<main>
+
+<div id="places" class="grid">
+
+<div class="empty" id="empty">
+
+<h2>No hay lugares agregados</h2>
+
+<p>Presiona el botón + para comenzar.</p>
+
+</div>
+
+</div>
+
+</main>
+
+<button id="addButton">+</button>
+
+<div id="modal" class="modal">
+
+<div class="modalBox">
+
+<span id="close">&times;</span>
+
+<h2>Agregar Lugar</h2>
+
+<input
+id="name"
+type="text"
+placeholder="Nombre del lugar">
+
+<textarea
+id="description"
+placeholder="Descripción"></textarea>
+
+<input
+id="maps"
+type="text"
+placeholder="Link de Google Maps">
+
+<h3>Tipo de lugar</h3>
+
+<div class="emojiGrid">
+
+<button class="emoji" data-emoji="🏛">🏛</button>
+<button class="emoji" data-emoji="🔬">🔬</button>
+<button class="emoji" data-emoji="🐯">🐯</button>
+<button class="emoji" data-emoji="🐠">🐠</button>
+<button class="emoji" data-emoji="🌳">🌳</button>
+<button class="emoji" data-emoji="🎢">🎢</button>
+<button class="emoji" data-emoji="🛍">🛍</button>
+<button class="emoji" data-emoji="🍔">🍔</button>
+<button class="emoji" data-emoji="☕">☕</button>
+<button class="emoji" data-emoji="🎭">🎭</button>
+<button class="emoji" data-emoji="⚽">⚽</button>
+<button class="emoji" data-emoji="🌸">🌸</button>
+<button class="emoji" data-emoji="🏰">🏰</button>
+<button class="emoji" data-emoji="🚶">🚶</button>
+<button class="emoji" data-emoji="📍">📍</button>
+
+</div>
+
+<button id="save">
+Guardar Lugar
+</button>
+
+</div>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
