@@ -1,0 +1,342 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    text-align:center;
+    padding:60px 20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+header h1{
+    font-size:48px;
+}
+
+header p{
+    margin-top:10px;
+    opacity:.9;
+    font-size:18px;
+}
+
+/* CONTENIDO */
+
+main{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.empty{
+    grid-column:1/-1;
+    text-align:center;
+    border:3px dashed #334155;
+    padding:70px;
+    border-radius:20px;
+    color:#94a3b8;
+}
+
+/* TARJETAS */
+
+.card{
+    background:#1e293b;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.emoji{
+    font-size:70px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.card h2{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#cbd5e1;
+    margin-bottom:20px;
+    min-height:60px;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+.buttons button{
+    flex:1;
+    border:none;
+    border-radius:10px;
+    padding:12px;
+    cursor:pointer;
+    color:white;
+    font-size:15px;
+    transition:.2s;
+}
+
+.maps{
+    background:#ef4444;
+}
+
+.maps:hover{
+    background:#dc2626;
+}
+
+.delete{
+    background:#475569;
+}
+
+.delete:hover{
+    background:#334155;
+}
+
+/* BOTÓN FLOTANTE */
+
+#addButton{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:70px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    color:white;
+
+    font-size:40px;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+    transition:.25s;
+
+}
+
+#addButton:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* MODAL */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+.modalBox{
+
+    width:100%;
+
+    max-width:550px;
+
+    background:#1e293b;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    position:relative;
+
+}
+
+#close{
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    font-size:35px;
+
+    cursor:pointer;
+
+}
+
+.modalBox h2{
+
+    margin-bottom:20px;
+
+}
+
+.modalBox input,
+.modalBox textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#334155;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.modalBox textarea{
+
+    resize:vertical;
+
+    min-height:100px;
+
+}
+
+.modalBox h3{
+
+    margin:15px 0;
+
+}
+
+/* EMOJIS */
+
+.emojiGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+.emojiGrid .emoji{
+
+    font-size:32px;
+
+    background:#334155;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    padding:12px;
+
+    transition:.2s;
+
+}
+
+.emojiGrid .emoji:hover{
+
+    transform:scale(1.1);
+
+    background:#475569;
+
+}
+
+.emojiSelected{
+
+    background:#2563eb !important;
+
+    transform:scale(1.08);
+
+}
+
+/* BOTÓN GUARDAR */
+
+#save{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    background:#22c55e;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+#save:hover{
+
+    background:#16a34a;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+    .emojiGrid{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+    header h1{
+
+        font-size:35px;
+
+    }
+
+}
